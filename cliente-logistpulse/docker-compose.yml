@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env          # Clave de proveedor, ADMIN_PASSWORD, ACCESS_CODE... (ver .env.example)
+    volumes:
+      - datos:/data         # la base de datos sobrevive a reinicios y reconstrucciones
+    restart: unless-stopped
+
+volumes:
+  datos:

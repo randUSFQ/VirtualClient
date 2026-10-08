@@ -1,0 +1,8 @@
+{
+  "name": "Cliente LOGISTPULSE",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "features": { "ghcr.io/devcontainers/features/docker-in-docker:2": {} },
+  "forwardPorts": [3000],
+  "portsAttributes": { "3000": { "label": "Cliente LOGISTPULSE", "onAutoForward": "notify" } },
+  "postCreateCommand": "npm ci && [ -f .env ] || cp .env.example .env"
+}

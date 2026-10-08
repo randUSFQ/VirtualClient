@@ -1,0 +1,19 @@
+{
+  "name": "cliente-logistpulse",
+  "version": "1.0.0",
+  "description": "Cliente simulado de LOGISTPULSE para practicar elicitación de requisitos (entrevista de 6 minutos por persona).",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "MOCK_LLM=1 ADMIN_PASSWORD=admin123 node --disable-warning=ExperimentalWarning server/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
+    "express": "^5.2.1"
+  }
+}
